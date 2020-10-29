@@ -15,12 +15,14 @@ const AdminRouter = require("./routers/Admin");
 const EventRouter = require("./routers/Events");
 const ParticipantRouter = require("./routers/Participants");
 const StatisticsRouter = require("./routers/Statistics");
+const SlotsRouter = require("./routers/Slots");
 
 // use the imported routers
 app.use(AdminRouter);
 app.use(EventRouter);
 app.use(ParticipantRouter);
 app.use(StatisticsRouter);
+app.use(SlotsRouter);
 
 //listen to the port wherever the server is set
-app.listen(port);
+app.listen(port, () => console.log("Server Up on port " + port));
