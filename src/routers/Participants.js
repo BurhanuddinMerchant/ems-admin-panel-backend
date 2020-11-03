@@ -1,10 +1,10 @@
 const express = require("express");
 const router = new express.Router();
-
+const auth = require("../middleware/authentication");
 //create a basic model and then add the authentication middleware
 // const auth = require("../middleware/authentication")
 
-router.get("/admin/participant", () => {
+router.get("/admin/participant", auth, () => {
   //fetch for data from the database and send appropriate response
   // example query set to handle
   // /admin/participant
